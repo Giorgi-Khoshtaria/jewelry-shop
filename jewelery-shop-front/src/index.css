@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import "tailwindcss";
+
 @theme {
   --color-Accent: #a18a68;
   --color-Dark_gray: #707070;
@@ -10,3 +9,4 @@
   --font-font_primary: "DM Sans", "sans-serif";
   --font-font_secondary: "Allerta Stencil", "serif";
 }
+@import "tailwindcss";
