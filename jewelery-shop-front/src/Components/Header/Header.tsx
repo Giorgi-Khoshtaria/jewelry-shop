@@ -1,3 +1,5 @@
+import React from "react";
+
 function Header() {
   return (
     <header className=" w-full mt-16 flex justify-between items-center">
