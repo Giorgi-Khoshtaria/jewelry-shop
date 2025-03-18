@@ -5,9 +5,11 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <div className=" flex flex-col  bg-tahiti">
+    <div className="w-full  flex flex-col items-center bg-tahiti p-5 min-h-screen">
       <Header />
-      <Outlet />
+      <div className="flex-1 ">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
