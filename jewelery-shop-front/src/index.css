@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @theme {
+  --color-overlay: rgba(0, 0, 0, 0.5);
   --color-Accent: #a18a68;
   --color-Dark_gray: #707070;
   --color-Gray: #d8d8d8;
