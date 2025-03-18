@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className=" w-full flex flex-col items-center p-9 border-t border-Dark_gray">
-      <div className=" w-full flex justify-between items-center">
+      <div className=" w-full flex justify-between items-center gap-5 max-md: flex-col-reverse">
         <nav>
           <ul className=" flex justify-between items-center gap-5">
             <li>
@@ -14,11 +14,6 @@ function Footer() {
             <li>
               <a href="" className="text-Dark_gray text-base font-normal">
                 TERMS OF SERVICES
-              </a>
-            </li>
-            <li>
-              <a href="" className="text-Dark_gray text-base font-normal">
-                SHIPPING AND RETURNS
               </a>
             </li>
           </ul>
@@ -48,7 +43,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mt-8"> 2022 SHOPPE. ALL RIGHTS RESERVED.</div>
+      <div className="mt-8 max-md:mt-5"> 2022 SHOPPE. ALL RIGHTS RESERVED.</div>
     </footer>
   );
 }
