@@ -31,7 +31,7 @@ function Header() {
           </ul>{" "}
         </nav>
         <div className=" flex justify-center items-center gap-12 ">
-          <div className="w-[1px] h-[17px] bg-Gray "></div>
+          <div className="w-[1px] h-[17px] bg-Dark_gray "></div>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
