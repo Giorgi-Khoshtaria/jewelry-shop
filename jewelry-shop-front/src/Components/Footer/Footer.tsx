@@ -20,25 +20,13 @@ function Footer() {
         </nav>
         <div className="flex justify-center items-center gap-5 ">
           <a href="">
-            <img
-              src="../../../public/assets/facebook.svg"
-              alt="Facebook"
-              className="w-5"
-            />
+            <img src="/assets/facebook.svg" alt="Facebook" className="w-5" />
           </a>
           <a href="">
-            <img
-              src="../../../public/assets/instagram.svg"
-              alt="Instagram"
-              className="w-5"
-            />
+            <img src="/assets/instagram.svg" alt="Instagram" className="w-5" />
           </a>
           <a href="">
-            <img
-              src="../../../public/assets/tik-tok.svg"
-              alt="Tik-Tok"
-              className="w-5"
-            />
+            <img src="/assets/tik-tok.svg" alt="Tik-Tok" className="w-5" />
           </a>
         </div>
       </div>

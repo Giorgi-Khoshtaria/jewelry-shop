@@ -42,35 +42,23 @@ function Header() {
         <div className="flex justify-center items-center gap-12 max-lg:gap-8">
           <div className="w-[1px] h-[17px] bg-Gray max-md:hidden"></div>
           <div className="max-md:hidden">
-            <img
-              src="../../../public/assets/search.png"
-              alt="search"
-              className="w-5 h-5"
-            />
+            <img src="/assets/search.png" alt="search" className="w-5 h-5" />
           </div>
           <div className="max-md:hidden">
             <img
-              src="../../../public/assets/shopping-cart.png"
+              src="/assets/shopping-cart.png"
               alt="cart"
               className="w-5 h-5"
             />
           </div>
           <div>
-            <img
-              src="../../../public/assets/user.png"
-              alt="user"
-              className="w-5 h-5"
-            />
+            <img src="/assets/user.png" alt="user" className="w-5 h-5" />
           </div>
           <div
             onClick={handleModalShow}
             className=" hidden max-md:flex max-md:cursor-pointer"
           >
-            <img
-              src="../../../public/assets/menu-bar.png"
-              alt="menu"
-              className=" w-7 h-7 "
-            />
+            <img src="/assets/menu-bar.png" alt="menu" className=" w-7 h-7 " />
           </div>
         </div>
       </section>
@@ -106,14 +94,14 @@ function Header() {
               <div className=" flex justify-center items-center gap-10">
                 <div>
                   <img
-                    src="../../../public/assets/search.png"
+                    src="/assets/search.png"
                     alt="search"
                     className="w-5 h-5"
                   />
                 </div>
                 <div>
                   <img
-                    src="../../../public/assets/shopping-cart.png"
+                    src="/assets/shopping-cart.png"
                     alt="cart"
                     className="w-5 h-5"
                   />
