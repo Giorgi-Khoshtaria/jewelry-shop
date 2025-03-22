@@ -3,13 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Header() {
   const [show, setShow] = useState(false);
+  const [showUserModal, setShowUserModal] = useState(false);
 
   const handleModalShow = () => {
     setShow(!show);
   };
+  const handleShowUserModal = () => {
+    setShowUserModal(!showUserModal);
+  };
 
   return (
-    <header className="w-full mt-5 flex justify-between items-center">
+    <header className="w-full relative mt-5 flex justify-between items-center">
       <a
         href="/"
         className="font-font_secondary leading-10 text-4xl font-normal text-black"
@@ -21,19 +25,19 @@ function Header() {
       </a>
       <section className="flex justify-center items-center gap-12 max-lg:gap-8">
         <nav>
-          <ul className="flex justify-center items-center gap-16 max-lg:gap-10 max-md:hidden ">
+          <ul className="flex justify-center items-center gap-16 max-lg:gap-10 max-md:hidden">
             <li>
-              <a href="" className="text-base font-normal leading-7">
+              <a href="" className="text-base font-normal leading-7 text-black">
                 Shop
               </a>
             </li>
             <li>
-              <a href="" className="text-base font-normal leading-7">
+              <a href="" className="text-base font-normal leading-7 text-black">
                 Blog
               </a>
             </li>
             <li>
-              <a href="" className="text-base font-normal leading-7">
+              <a href="" className="text-base font-normal leading-7 text-black">
                 Our Story
               </a>
             </li>
@@ -51,7 +55,7 @@ function Header() {
               className="w-5 h-5"
             />
           </div>
-          <div>
+          <div onClick={handleShowUserModal}>
             <img src="/assets/user.png" alt="user" className="w-5 h-5" />
           </div>
           <div
@@ -63,10 +67,56 @@ function Header() {
         </div>
       </section>
 
+      {/* userModal */}
+      <AnimatePresence>
+        {showUserModal && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-overlay z-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={handleShowUserModal} // Close modal when clicked on overlay
+            />
+
+            {/* Modal Content */}
+            <motion.div
+              className="absolute top-0 right-0 w-70 rounded-2xl bg-white shadow-lg p-6 flex flex-col gap-6 z-20"
+              initial={{ y: "-100%" }} // Start from above the screen
+              animate={{ y: 0 }} // Move to normal position
+              exit={{ y: "-10%" }} // Move upwards when exiting
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            >
+              <button
+                onClick={handleShowUserModal}
+                className="self-end text-xl text-gray-700"
+              >
+                ✖
+              </button>
+              <div className=" w-full flex flex-col  items-center gap-10">
+                <a href="/login" className="text-lg font-medium text-black">
+                  Login
+                </a>
+                <div className=" w-full flex justify-between items-center gap-4">
+                  <a href="/forgot-password" className="text-sm text-Accent ">
+                    Forgot Password?
+                  </a>
+                  <a href="/registration" className="text-sm text-Accent">
+                    Register
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
       {/* Modal with Animation */}
       <AnimatePresence>
         {show && (
-          <>
+          <div>
             {/* Overlay with fade-in animation */}
             <motion.div
               className="fixed inset-x-0 top-0 bottom-0 bg-overlay z-10"
@@ -91,7 +141,7 @@ function Header() {
               >
                 ✖
               </button>
-              <div className=" flex justify-center items-center gap-10">
+              <div className="flex justify-center items-center gap-10">
                 <div>
                   <img
                     src="/assets/search.png"
@@ -109,18 +159,18 @@ function Header() {
               </div>
 
               <nav className="flex flex-col items-center gap-4">
-                <a href="/" className="text-lg font-medium text-gray-800">
+                <a href="/" className="text-lg font-medium text-black">
                   Shop
                 </a>
-                <a href="/" className="text-lg font-medium text-gray-800">
+                <a href="/" className="text-lg font-medium text-black">
                   Blog
                 </a>
-                <a href="/" className="text-lg font-medium text-gray-800">
+                <a href="/" className="text-lg font-medium text-black">
                   Our Story
                 </a>
               </nav>
             </motion.div>
-          </>
+          </div>
         )}
       </AnimatePresence>
     </header>
