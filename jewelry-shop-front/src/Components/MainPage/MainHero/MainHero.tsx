@@ -20,7 +20,7 @@ function MainHero() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center mb-16">
+    <section className="w-full flex flex-col items-center mb-16">
       <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
         <div
           className={`flex rounded-lg transition-transform duration-500 ease-in-out `}
@@ -63,7 +63,7 @@ function MainHero() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

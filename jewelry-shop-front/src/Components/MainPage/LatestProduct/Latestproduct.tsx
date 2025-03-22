@@ -3,7 +3,7 @@ import ShopCard from "../../SemiComponents/SemiShopCardComponent/ShopCard";
 
 function Latestproduct() {
   return (
-    <div>
+    <section>
       <div className="flex justify-between items-center mb-10">
         <h1 className="text-4xl font-medium leading-11 text-black ">
           Shop The Latest
@@ -23,7 +23,7 @@ function Latestproduct() {
         <ShopCard />
         <ShopCard />
       </div>
-    </div>
+    </section>
   );
 }
 
