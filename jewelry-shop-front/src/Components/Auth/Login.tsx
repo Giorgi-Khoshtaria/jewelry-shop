@@ -45,6 +45,11 @@ function Login() {
               </a>
             </p>
           </div>
+          <div className="w-full mt-4 text-center">
+            <a href="/" className="text-sm text-black">
+              ← Go Back
+            </a>
+          </div>
         </form>
       </div>
     </div>
