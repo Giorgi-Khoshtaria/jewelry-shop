@@ -82,7 +82,7 @@ function Header() {
 
             {/* Modal Content */}
             <motion.div
-              className="absolute top-0 right-0 w-70 rounded-2xl bg-white shadow-lg p-6 flex flex-col gap-6 z-20"
+              className="absolute top-0 right-0 w-50 rounded-2xl bg-white shadow-lg p-3 flex flex-col gap-4 z-20"
               initial={{ y: "-100%" }} // Start from above the screen
               animate={{ y: 0 }} // Move to normal position
               exit={{ y: "-10%" }} // Move upwards when exiting
@@ -99,14 +99,6 @@ function Header() {
                 <a href="/login" className="text-lg font-medium text-black">
                   Login
                 </a>
-                <div className=" w-full flex justify-between items-center gap-4">
-                  <a href="/forgot-password" className="text-sm text-Accent ">
-                    Forgot Password?
-                  </a>
-                  <a href="/registration" className="text-sm text-Accent">
-                    Register
-                  </a>
-                </div>
               </div>
             </motion.div>
           </>
